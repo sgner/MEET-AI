@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <defs>
+    <pattern id="simplePattern" x="0" y="0" width="50" height="50" patternUnits="userSpaceOnUse">
+      <!-- 增强的网格线 -->
+      <g stroke="rgba(0,0,0,0.15)" stroke-width="0.7">
+        <!-- 主要网格线 -->
+        <line x1="0" y1="0" x2="50" y2="0" />
+        <line x1="0" y1="25" x2="50" y2="25" />
+        <line x1="0" y1="50" x2="50" y2="50" />
+        
+        <line x1="0" y1="0" x2="0" y2="50" />
+        <line x1="25" y1="0" x2="25" y2="50" />
+        <line x1="50" y1="0" x2="50" y2="50" />
+      </g>
+      
+      <!-- 增强的圆点图案 -->
+      <g fill="rgba(0,0,0,0.2)">
+        <!-- 主要圆点 -->
+        <circle cx="12.5" cy="12.5" r="1" />
+        <circle cx="37.5" cy="12.5" r="1" />
+        <circle cx="12.5" cy="37.5" r="1" />
+        <circle cx="37.5" cy="37.5" r="1" />
+        
+        <!-- 额外的小圆点 -->
+        <circle cx="25" cy="12.5" r="0.6" />
+        <circle cx="25" cy="37.5" r="0.6" />
+        <circle cx="12.5" cy="25" r="0.6" />
+        <circle cx="37.5" cy="25" r="0.6" />
+      </g>
+      
+      <!-- 增强的装饰元素 -->
+      <circle cx="25" cy="25" r="2" fill="none" stroke="rgba(0,0,0,0.18)" stroke-width="0.7" />
+      <circle cx="25" cy="25" r="4" fill="none" stroke="rgba(0,0,0,0.12)" stroke-width="0.5" />
+    </pattern>
+  </defs>
+  
+  <!-- 应用图案到矩形上 - 使用更白的背景 -->
+  <rect x="0" y="0" width="200" height="200" fill="#ffffff" />
+  <rect x="0" y="0" width="200" height="200" fill="url(#simplePattern)" />
+</svg>

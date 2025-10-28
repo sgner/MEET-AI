@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="300" viewBox="0 0 500 300">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a58dff" />
+      <stop offset="100%" stop-color="#ee6a58" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="5" />
+      <feOffset dx="2" dy="2" result="offsetblur" />
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.3" />
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <keyframes id="pulse">
+      <animateTransform attributeName="transform" type="scale" values="1;1.05;1" dur="3s" repeatCount="indefinite" />
+    </keyframes>
+  </defs>
+  
+  <rect width="500" height="300" fill="url(#bgGradient)" rx="15" ry="15" />
+  
+  <!-- 圆形装饰 -->
+  <circle cx="120" cy="150" r="80" fill="rgba(255,255,255,0.2)" />
+  <circle cx="380" cy="150" r="60" fill="rgba(255,255,255,0.1)" />
+  
+  <!-- 动画元素：脉冲效果的圆点 -->
+  <g filter="url(#shadow)">
+    <circle cx="250" cy="150" r="40" fill="white">
+      <animateTransform attributeName="transform" type="scale" values="1;1.05;1" dur="3s" repeatCount="indefinite" />
+    </circle>
+  </g>
+  
+  <!-- 动画图标：用户轮廓 -->
+  <g transform="translate(250, 150)" filter="url(#shadow)">
+    <circle cx="0" cy="-15" r="15" fill="white" />
+    <path d="M0,0 L0,30 M-20,20 L20,20 M-15,45 L-10,20 M15,45 L10,20" stroke="white" stroke-width="5" fill="none" stroke-linecap="round" />
+  </g>
+  
+  <!-- 动画元素：浮动的圆点 -->
+  <circle cx="150" cy="100" r="10" fill="white" opacity="0.8">
+    <animate attributeName="cy" values="100;80;100" dur="4s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="350" cy="200" r="8" fill="white" opacity="0.6">
+    <animate attributeName="cy" values="200;220;200" dur="5s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="180" cy="220" r="6" fill="white" opacity="0.7">
+    <animate attributeName="cy" values="220;200;220" dur="6s" repeatCount="indefinite" />
+  </circle>
+</svg>

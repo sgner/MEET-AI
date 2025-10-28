@@ -1,0 +1,37 @@
+{
+  "id": "5024251",
+  "name": "MEET-AI",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "3224301",
+      "name": "短信",
+      "font_class": "duanxin",
+      "unicode": "e657",
+      "unicode_decimal": 58967
+    },
+    {
+      "icon_id": "9186709",
+      "name": "微信",
+      "font_class": "weixin",
+      "unicode": "e665",
+      "unicode_decimal": 58981
+    },
+    {
+      "icon_id": "37684142",
+      "name": "账户信息",
+      "font_class": "zhanghuxinxi",
+      "unicode": "e628",
+      "unicode_decimal": 58920
+    },
+    {
+      "icon_id": "39645163",
+      "name": "二维码付款码",
+      "font_class": "erweima",
+      "unicode": "e6b6",
+      "unicode_decimal": 59062
+    }
+  ]
+}

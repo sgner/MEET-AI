@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="300" viewBox="0 0 500 300">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a58dff" />
+      <stop offset="100%" stop-color="#ee6a58" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="5" />
+      <feOffset dx="2" dy="2" result="offsetblur" />
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.3" />
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <rect width="500" height="300" fill="url(#bgGradient)" rx="15" ry="15" />
+  
+  <!-- 搜索界面插图 -->
+  <g transform="translate(250, 150)" filter="url(#shadow)">
+    <!-- 搜索框 -->
+    <rect x="-120" y="-40" width="240" height="40" rx="20" ry="20" fill="white" />
+    <!-- 搜索图标 -->
+    <circle cx="-100" cy="-20" r="8" fill="#a58dff" />
+    <path d="M-90,-20 L-80,-20 M-85,-25 L-85,-15" stroke="#a58dff" stroke-width="2" />
+    <!-- 搜索文本 -->
+    <text x="-70" y="-17" font-family="Arial, sans-serif" font-size="14" fill="#333">Search criteria...</text>
+    
+    <!-- 筛选选项卡片 -->
+    <rect x="-150" y="20" width="140" height="120" rx="10" ry="10" fill="white" />
+    <rect x="10" y="20" width="140" height="60" rx="10" ry="10" fill="white" />
+    <rect x="10" y="90" width="140" height="50" rx="10" ry="10" fill="white" />
+    
+    <!-- 选项标题 -->
+    <text x="-140" y="45" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333">Location</text>
+    <text x="20" y="45" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333">Price Range</text>
+    <text x="20" y="110" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333">Features</text>
+    
+    <!-- 滑块和选项 -->
+    <rect x="-130" y="55" width="100" height="3" fill="#ddd" rx="1" ry="1" />
+    <circle cx="-80" cy="56.5" r="5" fill="#a58dff" />
+    <rect x="-130" y="75" width="80" height="20" rx="10" ry="10" fill="#eee" />
+    <text x="-120" y="88" font-family="Arial, sans-serif" font-size="10" fill="#666">City Center</text>
+    
+    <!-- 价格滑块 -->
+    <rect x="30" y="55" width="100" height="3" fill="#ddd" rx="1" ry="1" />
+    <circle cx="50" cy="56.5" r="5" fill="#a58dff" />
+    <circle cx="100" cy="56.5" r="5" fill="#ee6a58" />
+    
+    <!-- 特征复选框 -->
+    <rect x="30" y="100" width="14" height="14" rx="2" ry="2" fill="#a58dff" />
+    <text x="50" y="112" font-family="Arial, sans-serif" font-size="10" fill="#333">WiFi</text>
+    <rect x="90" y="100" width="14" height="14" rx="2" ry="2" fill="#eee" stroke="#ccc" />
+    <text x="110" y="112" font-family="Arial, sans-serif" font-size="10" fill="#333">Parking</text>
+  </g>
+  
+  <!-- 装饰元素 -->
+  <circle cx="100" cy="100" r="40" fill="rgba(255,255,255,0.1)" />
+  <circle cx="400" cy="200" r="30" fill="rgba(255,255,255,0.1)" />
+</svg>
